@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Aplicación web progresiva para la conversión de unidades de temperatura" />
+    <meta name="keywords" content="calculo,matematico,conversion,temperatura,practica,investigacion,estudio,conversion" />
+    <meta name="autor" content="Flamenco" />
+    <meta name="copyright" content="2025 RECM" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Conversor de temperatura Flamenco</title>
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.6.0-web/css/all.css" />
+</head>
+<body>
+    <h1>Convertidor de Temperatura</h1>
+    <form id="converter">
+        <label for="input-temp">Temperatura:</label>
+        <input type="text" id="input-temp" name="input-temp" value="20" />
+        <label for="input-unit">De</label>
+        <select id="input-unit" name="input-unit">
+            <option value="c">Celsius</option>
+            <option value="f">Fahrenheit</option>
+            <option value="k">Kelvin</option>
+        </select>
+
+        <label for="ouput-unit">Hacia</label>
+        <select id="ouput-unit" name="ouput-unit">
+            <option value="c">Celsius</option>
+            <option value="f">Fahrenheit</option>
+            <option value="k">Kelvin</option>
+        </select>
+<output name="ouput-temp" id="ouput-temp" for="imput-temp imput-unit ouput-unit">68 F</output>
+
+    </form>
+</body>
+</html>
