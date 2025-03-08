@@ -1,34 +1,34 @@
 const CACHE_NAME = "convertidor-temperatura-v1";
 
-self.addEventListener('install', event => { 
-    event.waitUntil((async()=>{
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
         const cache = await caches.open(CACHE_NAME);
-        cache.addAll([ 
+        await cache.addAll([
             './',
-           // './index.html',
+            // './index.html',
             './converter.js',
             './css/style.css'
         ]);
     })());
 });
 
-self.addEventListener('fetch',event=> {
-    event.respondWith((async ()  =>{
+self.addEventListener('fetch', event => {
+    event.respondWith((async () => {
         const cache = await caches.open(CACHE_NAME);
-        const cachedRespone = await cache.match(event.request);
-         
-        if (cachedRespone){
-            return cachedRespone;
+        const cachedResponse = await cache.match(event.request);
 
-        }else{
-            try{
+        if (cachedResponse) {
+            return cachedResponse;
+        } else {
+            try {
                 const fetchResponse = await fetch(event.request);
-                cache.put(event.request,fetchResponse.close());
+                const fetchResponseClone = fetchResponse.clone();
+                cache.put(event.request, fetchResponseClone);
                 return fetchResponse;
-
-            }catch(e){
-                //hubo problemas  de red de datos 
+            } catch (e) {
+                // PROBLEMAS DE RED
             }
         }
     })());
 });
+
