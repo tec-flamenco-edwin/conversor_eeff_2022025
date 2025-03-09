@@ -3,7 +3,7 @@
     "lang":"es-SV",
     "name": "conversor de temperaturas",
     "show_name": "conversor",
-    "descripcion": "un convertidor de unidades de temperaturas celsius , fahrenheot y kelvin",
+    "description": "un convertidor de unidades de temperaturas celsius , fahrenheot y kelvin",
     "start_url": "./",
     "background_color": "#2F3D58",
     "theme_color": "#2F3D58",
