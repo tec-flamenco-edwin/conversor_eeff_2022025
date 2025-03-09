@@ -26,7 +26,7 @@ self.addEventListener('fetch', event => {
                 cache.put(event.request, fetchResponseClone);
                 return fetchResponse;
             } catch (e) {
-                // PROBLEMAS DE RED
+                
             }
         }
     })());
