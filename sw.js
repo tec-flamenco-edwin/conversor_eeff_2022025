@@ -1,13 +1,13 @@
-const CACHE_NAME = "convertidor-temperatura-v1";
+ const CACHE_NAME = "convertidor-temperatura-v1";
 
 self.addEventListener('install', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE_NAME);
         await cache.addAll([
             './',
-            // './index.html',
+             './index.html',
             './converter.js',
-            './css/style.css'
+            './style.css'
         ]);
     })());
 });
